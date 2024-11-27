@@ -1,0 +1,242 @@
+@import url("https://font.googleapis.com/css?family=Poppins:ital, wght@0,100;0, 200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6f97c4;
+}
+
+.calendar{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.day-number {
+    font-weight: 600;
+}
+
+.event-count {
+    display: inline-block;
+    background-color: #ff5869;
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 5px;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.monthYear{
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day{
+    text-align: center;
+    padding: 5px;
+    color: #999FA6;
+    font-weight: 500;
+}
+
+.dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.date.active,
+.date:hover{
+    background: #ff5869;
+    color: #fff;
+}
+
+#dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date.inactive{
+    color: #d2d2d2;
+}
+
+.date.inactive:hover {
+    color: #fff;
+}
+
+.calendar-container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#event-list {
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.event-item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#event-form {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.calendar-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-sidebar {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#event-list {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.event-item {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#event-form {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#add-event-button{
+    background: #ff5869;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#save-event-button{
+    background: #ff5869;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#cancel-event-button{
+    background: #ff5869;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.date.selected {
+    border: 2px solid #ff5869;
+    border-radius: 5px;
+}
+
+.delete-event-button {
+    margin-left: 10px;
+    padding: 3px 8px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #ff5869;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-event-button:hover {
+    background-color: #ff2e43;
+}

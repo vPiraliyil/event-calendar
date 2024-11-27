@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="header">
+                <button id="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="monthYear" id="monthYear"></div>
+                <button id="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="days">
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+                <div class="day">Sun</div>
+            </div>
+            <div class="dates" id="dates"></div>
+        </div>
+        <div class="event-sidebar">
+            <h2>Events</h2>
+            <div id="event-list"></div>
+            <button id="add-event-button">Add Event</button>
+    
+            <div id="event-form" class="hidden">
+                <h3 id="event-form-title">Add Event</h3>
+                <input type="datetime-local" id="event-date" step="3600" />
+                <input type="text" id="event-description" placeholder="Event Description" />
+                <button id="save-event-button">Save</button>
+                <button id="cancel-event-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
+
